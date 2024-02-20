@@ -300,6 +300,8 @@
             ((modulep! :completion ivy)        #'ivy-resume)
             ((modulep! :completion helm)       #'helm-resume))
 
+      (:when (modulep! :term vterm)
+       :desc "Run vterm in project" "$" #'projectile-run-vterm)
       :desc "Search for symbol in project" "*" #'+default/search-project-for-symbol-at-point
       :desc "Search project"               "/" #'+default/search-project
 
